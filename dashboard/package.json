@@ -1,0 +1,14 @@
+{
+  "name": "dashboard",
+  "version": "0.0.1",
+  "description": "dashboard for Apache Storm and HBase",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "hbase-rpc-client": "^0.1.10",
+    "socket.io": "^1.4.3"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Test</title>
+    <style type="text/css">
+        div.msg { border: 1px solid darkblue; }
+        td:nth-child(1) {
+            font-weight: bold;
+            padding-right: 50px;
+        }
+        th, td { padding: 5px; }
+    </style>
+  </head>
+  <body>
+    <h1>Test</h1>
+    <ul id="stream"></ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.4.3.js"></script>
+    <script>
+    $(function () {
+        var socket = io();
+        socket.on('message', function(msg){
+            var encodedMsg = $('<div />').text(JSON.stringify(msg)).html();
+            $('#stream').append('<li>' + encodedMsg + '</li>')
+        });
+    });
+    </script>
+  </body>
+</html>

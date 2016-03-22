@@ -1,0 +1,9 @@
+/.settings
+/.classpath
+/.project
+/target
+/bin
+/dashboard/node_modules
+.idea
+*.iml
+*.DS_Store
